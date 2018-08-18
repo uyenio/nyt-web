@@ -6,6 +6,8 @@ module.exports = function override(config, env) {
     libraryName: 'antd',
     style: true
   }], config);
-  config = rewireLess(config, env);  
+  config = rewireLess.withLoaderOptions({
+    javascriptEnabled: true
+  })(config, env);  
   return config;
 };
