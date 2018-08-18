@@ -10,7 +10,7 @@ export function getArticles(params = {}) {
         params: {
           ...params,
           'api-key': NYT_API_KEY,
-          'q': 'australia'
+          'q': 'sydney'
         }
       })
       .then((response) => {
